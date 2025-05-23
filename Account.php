@@ -19,7 +19,7 @@ $custId = createCustId($last, $pwd);
 $_SESSION['custId'] = $custId;
 
 //Grabs customer data from the customer table
-$query = 'SELECT l_name
+$query = 'SELECT last_name
           FROM customer
           WHERE cust_id = :custId';
 
@@ -30,13 +30,13 @@ $statement->execute();
 $customer = $statement->fetch();
 $statement->closeCursor();
 
-$name = $customer['f_name'];
+$name = $customer['last_name'];
 
 
 
 
 //Grab car information 
-$query = 'SELECT year_made, make, model
+$query = 'SELECT year, make, model
           FROM car
           WHERE cust_id = :custID';
 
@@ -62,7 +62,7 @@ $statement->closeCursor();
 <main>
 
     <body>
-        <h1>Mac Auto</h1>
+        
         <h3><?php echo $name; ?></h3>
 
 
@@ -81,7 +81,7 @@ $statement->closeCursor();
             <tbody>
                 <?php foreach ($cars as $car): ?>
                     <tr>
-                        <td><?php echo $car['year_made'] ?> </td>
+                        <td><?php echo $car['year'] ?> </td>
                         <td><?php echo $car['make'] ?> </td>
                         <td><?php echo $car['model'] ?> </td>
 

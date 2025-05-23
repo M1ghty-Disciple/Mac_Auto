@@ -15,16 +15,15 @@ $vin = $_POST['vin'];
 $custId = $_SESSION['custId'];
 
 $query = 'INSERT INTO car
-            (cust_id,  make, model, year_made, vin)
+            (cust_id,  make, model, year, vin)
           VALUEs
-          (:custId, :make, :model, :yearMade, :vin)';
+          (:custId, :make, :model, :year, :vin)';
 
 $statement = $db->prepare($query);
 $statement->bindValue(':custId', $custId);
-$statement->bindValue(':carId', $carId);
 $statement->bindValue(':make', $make);
 $statement->bindValue(':model', $model);
-$statement->bindValue(':yearMade', $yearMade);
+$statement->bindValue(':year', $yearMade);
 $statement->bindValue(':vin', $vin);
 $statement->execute();
 $statement->closeCursor();
