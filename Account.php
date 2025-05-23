@@ -54,7 +54,7 @@ $statement->closeCursor();
 <html>
 
 <head>
-    <title>Mac Auto Repair</title>
+    <?php include 'header.php'; ?>
     <link rel="stylesheet" href="Account.css">
 
 </head>

@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <?php include 'header.php'; ?>
     <title>MAc Auto Shop</title>
 </head>
 

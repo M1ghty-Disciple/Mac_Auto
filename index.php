@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <title>Mac's Auto Repair</title>
+    <?php include 'header.php'; ?>
+    
     <link rel="stylesheet" href="">
 </head>
 <main>
