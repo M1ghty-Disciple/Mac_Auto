@@ -8,7 +8,12 @@
 </head>
 
 <h1>Mac Auto Repair</h1>
-<h2><a href="Login.php">Login</a></h2>
+<p>
+    <a href="Login.php">Login</a>   <a href="index.php">SignUp</a>
+                                        
+
+</p>
+
 
 
 
