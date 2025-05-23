@@ -24,7 +24,7 @@ validate($validName, $lName);
 
 //Adds new customer to the database
 $query = "INSERT INTO customer
-            (cust_id, l_name, pwd)
+            (cust_id, last_name, pwd)
           VALUES
             (:custId,:lName,:pwd)";
 

@@ -11,13 +11,13 @@ $yearMade = $_POST['year'];
 $model = $_POST['model'];
 $make = $_POST['make'];
 $vin = $_POST['vin'];
-$carId = createCarId($vin);
+
 $custId = $_SESSION['custId'];
 
 $query = 'INSERT INTO car
-            (cust_id, car_id, make, model, year_made, vin)
+            (cust_id,  make, model, year_made, vin)
           VALUEs
-          (:custId, :carId, :make, :model, :yearMade, :vin)';
+          (:custId, :make, :model, :yearMade, :vin)';
 
 $statement = $db->prepare($query);
 $statement->bindValue(':custId', $custId);
